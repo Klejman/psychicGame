@@ -41,7 +41,7 @@ document.onkeyup = function(event) {
     if (letterToBeGuessed == userGuess) {
         wins++;
         //tried alert here but stopped the function and did not display the last guess and the counter was stuck at 1 remainging guess
-        console.log("You won!");
+        console.log("No doubt about it, you are psychic!");
         guessesLeft = 9;
         guessesSoFar = [];
         letterToBeGuessed = letterChoices[Math.floor(Math.random() * letterChoices.length)];
@@ -56,7 +56,7 @@ document.onkeyup = function(event) {
     if (guessesLeft == 0) {
         losses++;
         //tried alert here but stopped the function and did not display the last guess and the counter was stuck at 1 remainging guess
-        console.log("You lost!");
+        console.log("Your psychic abilities are questionable, play again?");
         guessesLeft = 9;
         guessesSoFar = [];
         letterToBeGuessed = letterChoices[Math.floor(Math.random() * letterChoices.length)];
