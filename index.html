@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title>My Psychic Game</title>
-
+  <head>
+    <title>My Psychic Game</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Link to reset.css -->
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-  <!-- css stylesheet -->
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
-
-<body>        
-        <div id="game">
-        <header>
-          <h1>The Psychic Game</h1>
-          <h4>Guess what letter I'm thinking of:</h4>
-          </header>
-          <p><h4>Wins: 0</h4></p>
-          <p><h4>Losses: 0</h4></p>
-          <p><h4>Guesses Left: 9</h4></p>
-          <p><h4>Your guesses so far: </h4></p>
-        </div>
-  
-  <!-- Link to javascript -->
-  <script type="text/javascript" src="app.js"></script>
-
+    <!-- Link to reset.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- css stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- javaScript cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Link to button sound -->
+    <script src="sound.js"></script>
+    <!-- Link to app.js file -->
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <script>
+    function play(){
+    var audio = document.getElementById("audio");
+    audio.play();
+    }
+    </script>
+    <div>
+      <header>
+        <h1>Psychic Game</h1>
+        <h3>Guess what letter I'm thinking of:</h3>
+        <input class="music-button" type="button" value="PLAY MUSIC" onClick="play()">
+        <input class="pause-button" type="button" value="|| MUSIC" onClick="pause()">
+      <audio id="audio" src="sound.js" loop></audio>
+    </header>
+  </div>
+  <div id="game">
+    <p><h4>Wins: 0</h4></p>
+    <p><h4>Losses: 0</h4></p>
+    <p><h4>Guesses Left: 9</h4></p>
+    <p><h4>Guesses so far: </h4></p>
+  </div>
 </body>
-
 </html>
